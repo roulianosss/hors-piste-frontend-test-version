@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+
+input {
+    padding: 15px 25px;
+    margin: 25px;
+}
+
+button  {
+    padding: 15px 25px;
+}
