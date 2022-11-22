@@ -1,9 +1,7 @@
 const button = document.querySelector('button')
-button.addEventListener('click', handleClick)
-
 const inputs = document.querySelectorAll('input')
 
-console.log(inputs[0].value)
+button.addEventListener('click', handleClick)
 
 const user = {
     name: '',
@@ -11,6 +9,7 @@ const user = {
     birth: '',
     surname: ''
 }
+
 const modelId = '1Ort_lBBBKUsWhDXxcI9RIJPnfie3_DHeEY-zT_6k_tI'
 
 function handleClick() {
