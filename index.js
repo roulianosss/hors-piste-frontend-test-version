@@ -1,6 +1,8 @@
 const button = document.querySelector('button')
 const inputs = document.querySelectorAll('input')
 
+const backendUrl = 'https://hors-pistes-backend.vercel.app' //'http://localhost:3000'
+
 button.addEventListener('click', handleClick)
 
 const user = {
@@ -23,7 +25,7 @@ function handleClick() {
 }
 
 function createFolder() {
-    fetch('http://localhost:3000/docs/createFolder',{
+    fetch(`${backendUrl}/docs/createFolder`,{
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
@@ -38,7 +40,7 @@ function createFolder() {
 }
 
 function copyModel(folderId) {
-    fetch('http://localhost:3000/docs/copyModel', {
+    fetch(`${backendUrl}/docs/copyModel`, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
@@ -54,7 +56,7 @@ function copyModel(folderId) {
 }
 
 function replace(documentId) {
-    fetch('http://localhost:3000/docs/replaceWords', {
+    fetch(`${backendUrl}/docs/replaceWords`, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
@@ -98,17 +100,3 @@ const requestsWordsGenerator = (arr) => {
     return res
 }
 
-// const wordsToReplaces = [
-//     {
-//         textToReplace: '{{NAME}}',
-//         newText: user.name
-//     },
-//     {
-//         textToReplace: '{{BIRTH}}',
-//         newText: user.birth
-//     },
-//     {
-//         textToReplace: '{{EMAIL}}',
-//         newText: user.email
-//     },
-// ]
